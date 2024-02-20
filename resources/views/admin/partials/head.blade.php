@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('freedash/src/assets/images/favicon.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('logo.png')}}">
     <title>@yield('title') | DIGITAL INDONESIA</title>
     <!-- Custom CSS -->
     <link href="{{asset('freedash/src/assets/extra-libs/c3/c3.min.css')}}" rel="stylesheet">

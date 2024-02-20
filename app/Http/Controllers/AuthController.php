@@ -27,7 +27,8 @@ class AuthController extends Controller
            return redirect()->route('admin.category.index');
        }else{
         return redirect()->back();
-       }
+    }
+
     }
     public function logout()
     {

@@ -18,4 +18,7 @@ class Gallery extends Model
     {
         return $this->belongsTo(Post::class);
     }
+    public function images(){
+        return $this->hasMany(Image::class, 'id');
+    }
 }

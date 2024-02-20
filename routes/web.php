@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\HomeController;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Gallery;
@@ -23,9 +24,7 @@ use App\Models\Image;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[HomeController::class, 'index']);
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     Route::group(['prefix' => 'category'], function(){
         Route::get('/', function(){
@@ -40,9 +39,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         Route::delete('/delete/{id}', [CategoryController::class, 'delete'])->name('admin.category.delete');
     });
     Route::group(['prefix' => 'post'], function(){
-        Route::get('/', function(){
-            return view('admin.post.index', ['posts' => Post::all()]);
-        })->name('admin.post.index');
+        Route::get('/', [PostController::class, 'index'])->name('admin.post.index');
         Route::get('/create', function(){
             return view('admin.post.create', ['categories' => Category::all()]);
         })->name('admin.post.create');

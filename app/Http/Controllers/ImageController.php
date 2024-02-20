@@ -18,7 +18,7 @@ class ImageController extends Controller
         Image::create([
             'gallery_id' => $request->post,
             'file' => $path,
-            'title' => $request->title
+            'title' => $request->judul
         ]);
         return redirect()->route('admin.image.index');
 

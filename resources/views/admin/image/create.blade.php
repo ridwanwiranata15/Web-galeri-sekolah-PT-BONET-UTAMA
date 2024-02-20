@@ -14,12 +14,12 @@
                      </select>
                 </div>
                 <div class="mb-3">
+                    <label for="formFile" class="form-label">Judul</label>
+                    <input class="form-control" type="text" id="formFile" name="judul">
+                </div>
+                <div class="mb-3">
                     <label for="formFile" class="form-label">Tambahkan Foto</label>
                     <input class="form-control" type="file" id="formFile" name="image">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">judul</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="title">
                 </div>
                 <button type="submit" class="btn btn-success">Tambah</button>
             </form>

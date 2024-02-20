@@ -24,4 +24,8 @@ class Post extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function galleries()
+    {
+        return $this->hasMany(Gallery::class, 'id');
+    }
 }
